@@ -13,6 +13,8 @@
   --sidebar-line-height: 17.66px;
   --sidebar-color: #727190;
 
+  --body-color: #201e43;
+
   --article-color: #ecebf6;
 
   --aside-size: 12px;
@@ -42,7 +44,7 @@ li {
 
   padding: 20px 0 20px 20px;
 
-  background: #201e43;
+  background: var(--body-color);
 
   font-family: var(--sidebar-font);
   font-size: var(--sidebar-size);
@@ -177,7 +179,7 @@ li {
 
   padding-left: 63px;
   border-radius: 10px;
-  background: #201e43;
+  background: var(--body-color);
   color: #ecebf6;
 
   border: 1px transparent;
@@ -248,10 +250,11 @@ li {
 }
 
 .article_card > div {
+  position: relative;
   width: 252px;
   height: 329px;
   border-radius: 15px;
-  background: #201e43;
+  background: var(--body-color);
 
   margin-top: 26px;
   padding: 7px 7px 100px 7px;
@@ -295,6 +298,38 @@ li {
   height: 217px;
 }
 
+.article__bookmark {
+  width: 29px;
+  height: 29px;
+  border-radius: 4.14px;
+  background: #ffffff36;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 20px;
+  right: 19px;
+}
+.article__text {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 189px;
+  left: 18px;
+
+  padding: 5px 10px;
+  border-radius: 13.02px;
+
+  background: var(--body-color);
+  font-family: var(--sidebar-font);
+  font-size: 9px;
+  font-weight: 600;
+}
+
 .article_nft {
   width: 827px;
 }
@@ -309,7 +344,7 @@ li {
   grid-template-columns: 331px 10px;
 
   margin-top: 41px;
-  font-family: Gilroy;
+
   font-size: 24px;
   font-weight: 600;
   line-height: 29.4px;
@@ -328,7 +363,7 @@ li {
 }
 
 .select {
-  background: #201e43;
+  background: var(--body-color);
   padding: 8px 10px 7px 10px;
   color: var(--article-color);
   border: none;
@@ -340,7 +375,7 @@ table {
   width: 827px;
   height: 301px;
   border-radius: 15px;
-  background: #201e43;
+  background: var(--body-color);
   color: white;
   font-size: 14px;
   line-height: 16.48px;
@@ -397,7 +432,7 @@ td {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #201e43;
+  background: var(--body-color);
 }
 
 .aside_header > div > img {
@@ -421,12 +456,27 @@ td {
 }
 
 .aside_main {
+  position: relative;
   width: 331px;
   height: 403px;
   border-radius: 15px;
 
   margin-top: 32px;
-  background: #201e43;
+  background: var(--body-color);
+}
+
+.aside__text {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 127px;
+  left: 36px;
+
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: var(--body-color);
 }
 .aside_main_title {
   display: grid;
@@ -479,7 +529,7 @@ td {
 
   margin-top: 28px;
 
-  background: #201e43;
+  background: var(--body-color);
 }
 
 .aside__cards {
@@ -493,7 +543,7 @@ td {
   grid-template-columns: 66px 115px 91px;
   align-items: center;
 
-  background: #201e43;
+  background: var(--body-color);
 }
 .aside__card div {
   display: grid;
