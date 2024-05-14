@@ -6,8 +6,20 @@
   box-sizing: border-box;
 }
 
+:root {
+  --sidebar-font: "Gilroy" sans-serif;
+  --sidebar-size: 15px;
+  --sidebar-weight: 500;
+  --sidebar-line-height: 17.66px;
+  --sidebar-color: #727190;
+
+  --article-color: #ecebf6;
+
+  --aside-size: 12px;
+}
+
 body {
-  font-family: Roboto;
+  font-family: "Roboto" sans-serif;
   caret-color: transparent;
   background: #0a0914;
 }
@@ -22,12 +34,9 @@ li {
 
   grid-template-columns: 250px 825px 331px;
   gap: 35px;
-  /* grid-template-rows: 10fr; */
 }
 
 .sidebar {
-  /* display: grid; */
-
   grid-template-columns: 1fr;
   grid-template-rows: 53px;
 
@@ -35,28 +44,29 @@ li {
 
   background: #201e43;
 
-  color: #727190;
+  font-family: var(--sidebar-font);
+  font-size: var(--sidebar-size);
+  font-weight: var(--sidebar-weight);
+  line-height: var(--sidebar-line-height);
+  color: var(--sidebar-color);
 }
 
 .logo {
   display: grid;
-
   grid-template-columns: 45px 30px;
   margin-top: 41px;
 }
 
 .logo > h1 {
-  font-family: Expletus Sans;
+  font-family: "Expletus Sans" sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 32.14px;
-  text-align: left;
 
   color: #f5f4fb;
 }
 .sidebar_nav {
   display: grid;
-
   gap: 34px;
   margin-top: 69px;
 }
@@ -108,7 +118,7 @@ li {
 .sidebar_card {
   width: 195px;
   height: 165px;
-  background: linear-gradient(#868cff 100%, #4318ff 100%);
+  background: #4318ff;
   margin-top: 100px;
   border-radius: 10px;
   margin-bottom: 40px;
@@ -145,6 +155,11 @@ li {
   background: #f5e1e1;
 }
 .article {
+  font-family: var(--sidebar-font);
+  font-size: var(--sidebar-size);
+  font-weight: var(--sidebar-weight);
+  line-height: var(--sidebar-line-height);
+  color: var(--article-color);
 }
 
 .article_search {
@@ -188,7 +203,6 @@ li {
 
   display: grid;
   grid-template-columns: 336px 487px;
-
   align-items: center;
 
   color: white;
@@ -199,7 +213,7 @@ li {
 }
 
 .nav_logo > h1 {
-  font-family: Gilroy;
+  font-family: "Gilroy" sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 29.4px;
@@ -214,11 +228,8 @@ li {
   justify-content: end;
   gap: 45px;
 
-  font-family: Gilroy;
   font-size: 18px;
-  font-weight: 500;
   line-height: 21.19px;
-  color: #ecebf6;
 }
 
 .nav_list > li:hover {
@@ -249,15 +260,17 @@ li {
 .article_card > div > h3 {
   margin-top: 21px;
   margin-left: 17px;
-  color: #ecebf6;
 }
 
 .article_card > div > p {
   display: grid;
-  grid-template-columns: 80px 10px;
-  margin-top: 16px;
-  margin-left: 17px;
-  color: #ecebf6;
+  grid-template-columns: 58px 10px;
+  align-items: center;
+
+  margin: 16px 0px 0px 17px;
+
+  font-size: 12px;
+  line-height: 14.12px;
 }
 
 .article_card > div > p > span {
@@ -265,7 +278,6 @@ li {
   grid-template-columns: 10px 80px;
   gap: 15px;
 
-  font-family: Gilroy;
   font-size: 14px;
   font-weight: 600;
   line-height: 17.15px;
@@ -309,19 +321,16 @@ li {
   display: grid;
   grid-template-columns: 120px;
   gap: 15px;
-  color: #ecebf6;
+  color: var(--article-color);
 
-  font-family: Gilroy;
   font-size: 13px;
-  font-weight: 500;
   line-height: 15.3px;
-  text-align: left;
 }
 
 .select {
   background: #201e43;
   padding: 8px 10px 7px 10px;
-  color: #ecebf6;
+  color: var(--article-color);
   border: none;
   border-radius: 5px;
 }
@@ -333,11 +342,8 @@ table {
   border-radius: 15px;
   background: #201e43;
   color: white;
-  font-family: Gilroy;
   font-size: 14px;
-  font-weight: 500;
   line-height: 16.48px;
-  text-align: left;
 }
 
 th {
@@ -348,13 +354,12 @@ td {
   text-align: center;
 }
 
-.Collection {
+.collection {
   text-align: left;
 }
 .table_number {
   width: 37px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding: 0px 36px;
 }
 
 .td_images {
@@ -372,24 +377,30 @@ td {
   color: #19dca9;
 }
 
+.aside {
+  font-family: var(--sidebar-font);
+  font-weight: var(--sidebar-weight);
+  font-size: var(--aside-size);
+  color: var(--article-color);
+}
+
 .aside_header {
   display: grid;
-  grid-template-columns: 52px 140px 20px ;
+  grid-template-columns: 52px 140px 20px;
   align-items: center;
   gap: 12px;
   padding-left: 14px;
   margin-top: 48px;
 }
-.aside_header >div{
+.aside_header > div {
   position: relative;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #201E43;
-
+  background: #201e43;
 }
 
-.aside_header >div> img{
+.aside_header > div > img {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -406,11 +417,7 @@ td {
   border: none;
   color: #ecebf6;
 
-  font-family: Gilroy;
-  font-size: 14px;
-  font-weight: 500;
   line-height: 16.48px;
-  text-align: left;
 }
 
 .aside_main {
@@ -428,19 +435,12 @@ td {
   justify-content: space-between;
   padding: 21px 45px 29px 14px;
 
-  font-family: Gilroy;
   font-size: 18px;
-  font-weight: 600;
-  color: #ecebf6;
+  line-height: 16.48px;
 }
 
 .aside_main_title span:nth-child(2) {
-  font-family: Gilroy;
-  font-size: 14px;
-  font-weight: 500;
   line-height: 16.48px;
-
-  color: #cfcbe5;
 }
 
 .aside__img {
@@ -452,16 +452,14 @@ td {
 .aside_main > p {
   display: grid;
   grid-template-columns: 80px 88px;
-  margin-top: 16px;
-  margin-left: 35px;
-
-  color: #ecebf6;
+  margin: 16px 0px 0px 35px;
 }
 
 .aside_main > h3 {
+  margin: 11px 0px 0px 35px;
+
   margin-top: 21px;
   margin-left: 35px;
-  color: #ecebf6;
 }
 
 .aside_main > p > span {
@@ -469,11 +467,8 @@ td {
   grid-template-columns: 26px 0px;
   align-items: center;
 
-  font-family: Gilroy;
   font-size: 13.71px;
-  font-weight: 600;
   line-height: 16.8px;
-  text-align: left;
 
   color: #b7abff;
 }
@@ -487,21 +482,16 @@ td {
   background: #201e43;
 }
 
-.aside__cards{
-
-display: grid;
-gap: 26px;
-padding:0px  26px ;
+.aside__cards {
+  display: grid;
+  gap: 26px;
+  padding: 0px 26px;
 }
 
 .aside__card {
-  color: wheat;
   display: grid;
   grid-template-columns: 66px 115px 91px;
   align-items: center;
-
-  /* padding: 20px; */
-
 
   background: #201e43;
 }
@@ -510,24 +500,15 @@ padding:0px  26px ;
 }
 
 .aside__card span:nth-child(1) {
-  font-family: Gilroy;
   font-size: 14px;
-  font-weight: 500;
   line-height: 16.48px;
 
   margin-bottom: 3px;
-
-  color: #ecebf6;
 }
 
 .aside__card span:nth-child(2) {
-  font-family: Gilroy;
   font-size: 10px;
-  font-weight: 500;
   line-height: 11.77px;
-
-
-  color: #ecebf6;
 }
 .aside__btn {
   padding: 6px 26px;
